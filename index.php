@@ -8,5 +8,7 @@
 </head>
 <body>
         <h1>Ceci est une page test pour l'UI </h1>
+
+        <p>Test de push</p>
 </body>
 </html>
