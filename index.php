@@ -15,6 +15,7 @@
         <p>Dimitron cochon</p>
         <p>La Yeshnavette</p>
         <p>Pourquoi la vie est-elle si difficile ? Telle est la question nous allons y répondre avec ou sans argumentation précise ou circulaire.</p>
+        <p>Bonjour je suis Karen et j'ai 20 ans</p>
 </body>
 </html>
 
