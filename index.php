@@ -10,5 +10,6 @@
         <h1>Ceci est une page test pour l'UI </h1>
         <p>Test de push</p>
         <h3>Dernier Test</h3>
+        <button>Let's go with Webcup </button>
 </body>
 </html>
