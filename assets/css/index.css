@@ -5,30 +5,38 @@
     }
 
     .hero {
-      text-align: center;
-      padding: 4rem 1rem;
-      font-family: ;
+        text-align: center;
+        padding: 4rem 1rem;
+        font-family: "Poppins", sans-serif;
+    }
+
+    #title {
+        font-family: "IBM Plex Sans", sans-serif;
+    }
+
+    #content {
+
     }
 
     .gradient-section {
-      background: linear-gradient(120deg, #FFF085, #FF9B17, #F16767);
-      padding: 4rem 1rem;
-      border-radius: 2rem;
-      margin: 2rem auto;
+        background: linear-gradient(120deg, #FFF085, #FF9B17, #F16767);
+        padding: 4rem 1rem;
+        border-radius: 2rem;
+        margin: 2rem auto;
     }
 
     .features {
-      text-align: center;
-      padding: 3rem 1rem;
+        text-align: center;
+        padding: 3rem 1rem;
     }
 
     .features .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem;
     }
 
     .section-highlight {
-      padding: 4rem 1rem;
+        
     }
 
     .section-highlight .text-orange {

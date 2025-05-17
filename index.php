@@ -4,6 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Accueil - TheEnd.page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/index.css">
@@ -15,7 +20,7 @@
 
   <!-- Hero -->
   <section class="hero">
-    <h1 class="display-5 fw-bold">Parce que chaque fin<br>mérite un dernier mot.</h1>
+    <h1 class="display-5 fw-bold" id="title">Parce que chaque fin<br>mérite un dernier mot.</h1>
     <p class="lead mt-3">Ici, on ne tourne pas la page...<br>On la <b>brûle</b>, on la <b>customise</b>, et on la <b>partage</b>.</p>
     <a href="auth/login.php" class="btn btn-dark btn-lg mt-3 rounded-pill">Créer une page</a>
     <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
@@ -34,7 +39,7 @@
   <!-- Features -->
   <section class="features container">
     <h6 class="text-danger mb-2">Comment fonctionne TheEnd ?</h6>
-    <h2 class="fw-bold mb-5">Tu quittes quelque chose ou quelqu’un ?<br>Fais-le avec style.</h2>
+    <h2 class="fw-bold mb-5" id="title">Tu quittes quelque chose ou quelqu’un ?<br>Fais-le avec style.</h2>
     <div class="row text-center">
       <div class="col-md-3">
         <img src="assets/img/palette.png" class="img-fluid w-25">
@@ -67,7 +72,7 @@
       </div>
       <div class="col-md-6">
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
-        <h3 class="fw-bold">Ne pars pas sans dire un dernier mot.</h3>
+        <h3 class="fw-bold" id="title">Ne pars pas sans dire un dernier mot.</h3>
         <p class="mt-3">TheEnd t’aide avec une plateforme pour créer ta page de départ pleine de style (ou de larmes).</p>
         <a href="auth/login.php" class="btn-custom">Créer une page</a>
       </div>
@@ -82,8 +87,8 @@
       </div>
       <div class="col-md-6">
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
-        <h3 class="fw-bold">Pourquoi faire ça ?</h3>
-        <p class="mt-3">Parce que parfois, une fin ça peut aussi faire du bien. Parce que cette vérité-là on la “partage confidentiellement”.</p>
+        <h3 class="fw-bold" id="title">Pourquoi faire ça ?</h3>
+        <p class="mt-3" id="content">Parce que parfois, une fin ça peut aussi faire du bien. Parce que cette vérité-là on la “partage confidentiellement”.</p>
         <a href="auth/login.php" class="btn-custom">Créer une page</a>
       </div>
     </div>
