@@ -1,3 +1,29 @@
+<?php
+// Connexion à la BDD
+require_once '../config/bdconnect.php';
+
+// Requête pour récupérer toutes les pages avec leurs infos
+$sql = "
+    SELECT 
+        id_page,
+        pg_tone,
+        pg_message,
+        pg_object,
+        pg_file,
+        pg_gif,
+        pg_sounds,
+        pg_creationdate,
+        id_projects,
+        id_users
+    FROM page
+    ORDER BY pg_creationdate DESC
+";
+
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$pages = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +37,6 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
   <style>
-   
     body {
       background-color: #f8f9fa;
       font-family: 'Segoe UI', sans-serif;
@@ -20,7 +45,7 @@
     .container {
       width: 100%;
       max-width: 1200px;
-      margin: 1rem auto; /* réduit la marge verticale */
+      margin: 1rem auto;
       padding: 0 1rem;
       text-align: left;
     }
@@ -59,6 +84,7 @@
       color: #666;
       font-weight: 500;
       font-size: 1rem;
+      text-transform: capitalize;
     }
 
     .page-link{
@@ -85,11 +111,10 @@
       margin-bottom: 1.5rem;
     }
 
-    
     h2.text-orange {
       color: #EE5622;
-      margin-top: 0;       /* suppression de la marge haute */
-      margin-bottom: 1.5rem; /* marge raisonnable sous le titre */
+      margin-top: 0;
+      margin-bottom: 1.5rem;
       text-align: center;
     }
 
@@ -97,61 +122,87 @@
       .page-card + .page-card {
         margin-top: 1.5rem;
       }
-     
     }
     .all{
       margin-top: 7rem;
-      
     }
   </style>
 </head>
 
 <body>
 
-<?php include('../includes/navbar.php') ?>
+<?php include('../includes/navbar.php'); ?>
 
 <div class="container all">
   <h2 class="text-orange fw-bold">Mes pages</h2>
 
   <div class="pages-container">
-    <div class="page-card">
-      <h4 class="page-title">Présentation de K by Karen</h4>
-      <div class="mood-container">
-        <i class="fa-solid fa-face-smile mood-happy" title="Happy"></i>
-        <span>Happy</span>
-      </div>
-      <p class="page-preview">
-        Bienvenue sur la page de lancement de notre marque beauté <strong>K by Karen</strong> ! Une expérience sensorielle autour du gloss, du mascara et du blush dans un univers rose, doux et épuré.
-      </p>
-      <a href="k-by-karen.html" class="page-link">Voir la page complète</a>
-    </div>
 
-    <div class="page-card">
-      <h4 class="page-title">Projet UI/UX 2025</h4>
-      <div class="mood-container">
-        <i class="fa-solid fa-face-frown mood-sad" title="Sad"></i>
-        <span>Sad</span>
-      </div>
-      <p class="page-preview">
-        Cette page regroupe les travaux de design UX réalisés pour l'année 2025 : wireframes, prototypes Figma, documentation utilisateur...
-      </p>
-      <a href="uiux-2025.html" class="page-link">Voir la page complète</a>
-    </div>
+    <?php foreach ($pages as $page): ?>
 
-    <div class="page-card">
-      <h4 class="page-title">Page Exemple 3</h4>
-      <div class="mood-container">
-        <i class="fa-solid fa-face-angry mood-angry" title="Angry"></i>
-        <span>Angry</span>
+      <div class="page-card">
+        <h4 class="page-title"><?= htmlspecialchars($page['pg_object']) ?></h4>
+
+        <div class="mood-container">
+          <?php
+            $tone = strtolower($page['pg_tone']);
+            $iconClass = '';
+            $colorClass = '';
+            $toneLabel = ucfirst($tone);
+
+            switch ($tone) {
+              case 'happy':
+                $iconClass = 'fa-face-smile';
+                $colorClass = 'mood-happy';
+                break;
+              case 'sad':
+                $iconClass = 'fa-face-frown';
+                $colorClass = 'mood-sad';
+                break;
+              case 'angry':
+                $iconClass = 'fa-face-angry';
+                $colorClass = 'mood-angry';
+                break;
+              case 'formel':
+              case 'amical':
+              case 'professionnel':
+                $iconClass = 'fa-face-meh';
+                $colorClass = 'text-secondary';
+                break;
+              default:
+                $iconClass = 'fa-face-smile';
+                $colorClass = 'mood-happy';
+            }
+          ?>
+          <i class="fa-solid <?= $iconClass ?> <?= $colorClass ?>" title="<?= $toneLabel ?>"></i>
+          <span><?= htmlspecialchars($toneLabel) ?></span>
+        </div>
+
+        <p class="page-preview"><?= nl2br(htmlspecialchars($page['pg_message'])) ?></p>
+
+        <?php if (!empty($page['pg_file']) && strtolower($page['pg_file']) !== 'null'): ?>
+          <a href="<?= htmlspecialchars($page['pg_file']) ?>" class="page-link" target="_blank">
+            Voir la page complète
+          </a><br>
+        <?php endif; ?>
+
+        <?php if (!empty($page['pg_gif']) && strtolower($page['pg_gif']) !== 'null'): ?>
+          <img src="<?= htmlspecialchars($page['pg_gif']) ?>" alt="GIF" style="max-width:100%; margin-top:1rem; border-radius: 8px;">
+        <?php endif; ?>
+
+        <?php if (!empty($page['pg_sounds']) && strtolower($page['pg_sounds']) !== 'null'): ?>
+          <audio controls style="margin-top:1rem; width: 100%;">
+            <source src="<?= htmlspecialchars($page['pg_sounds']) ?>" type="audio/mpeg" />
+            Votre navigateur ne supporte pas la lecture audio.
+          </audio>
+        <?php endif; ?>
+
       </div>
-      <p class="page-preview">
-        Aperçu de la troisième page avec un contenu court pour démonstration.
-      </p>
-      <a href="#" class="page-link">Voir la page complète</a>
-    </div>
+
+    <?php endforeach; ?>
+
   </div>
 </div>
-
 
 </body>
 </html>
