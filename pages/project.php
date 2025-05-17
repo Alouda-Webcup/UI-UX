@@ -12,9 +12,9 @@
 
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
+      /* height: 100%; supprimé pour éviter le scroll */
     }
 
     body {
@@ -25,7 +25,7 @@
     .container {
       width: 100%;
       max-width: 1200px;
-      margin: 2rem auto; /* centrage horizontal + marge verticale */
+      margin: 1rem auto; /* réduit la marge verticale */
       padding: 0 1rem;
       text-align: center;
     }
@@ -33,7 +33,7 @@
     .pages-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 4rem;
       justify-content: center;
       margin-top: 1rem;
     }
@@ -100,7 +100,8 @@
 
     h2.text-orange {
       color: #EE5622;
-      margin-bottom: 1rem;
+      margin-top: 0;       /* suppression de la marge haute */
+      margin-bottom: 1.5rem; /* marge raisonnable sous le titre */
     }
 
     @media (max-width: 767px) {
@@ -116,7 +117,7 @@
 <?php include('../includes/navbar.php') ?>
 
 <div class="container">
-  <h2 class="text-orange mt-5 fw-bold">Mes pages</h2>
+  <h2 class="text-orange fw-bold">Mes pages</h2>
 
   <div class="pages-container">
     <div class="page-card">
