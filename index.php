@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="index.css">
+
     <title>Accueil - TheEnd.page</title>
 </head>
 <body>
@@ -27,7 +28,7 @@ include('includes/navbar.php');
                 <br>
                 <p>Ici, on ne tourne pas la page.</p>
                 <p>On la brûle, on la customise, on la partage.</p>
-                <a href="create.html" class="btn">Créer ma page</a>
+                <a href="#" class="btn">Créer ma page</a>
             </div>
         </div>
     </div>
@@ -35,8 +36,20 @@ include('includes/navbar.php');
 
 <section id="howitworks">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row justify-content-center align-items-center">
 
+        </div>
+    </div>
+</section>
+
+<section id="presentation">
+    <div class="container">
+        <div class="col-lg-6 justify-content-center align-items-center">
+
+        </div>
+
+        <div class="col-lg-6 justify-content-center align-items-center">
+        
         </div>
     </div>
 </section>
