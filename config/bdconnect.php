@@ -9,10 +9,11 @@ session_start();
 //     exit();
 // }
 
-$host = "localhost"; 
-$dbname = "alouda_db";
-$username = "alouda_db";
-$password = "dacram-nIpqes-xinji9";
+// Paramètres de connexion
+$host = 'localhost';
+$dbname = 'alouda_db';
+$username = 'alouda_db';
+$password = 'dacram-nIpqes-xinji9';
 
 // Connexion avec PDO
 try {
