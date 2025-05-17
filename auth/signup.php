@@ -1,5 +1,5 @@
 <?php
-require 'bdconnect.php';
+require '../config/bdconnect.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = htmlspecialchars(trim($_POST["username"]));

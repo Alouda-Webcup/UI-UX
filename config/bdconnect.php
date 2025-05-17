@@ -40,5 +40,5 @@ if (isset($_GET['regen_captcha'])) {
 }
 
 // Pour afficher la question captcha (exemple)
-echo "Captcha : " . $_SESSION['captcha_question'];
+// echo "Captcha : " . $_SESSION['captcha_question'];
 ?>

@@ -1,5 +1,5 @@
 <?php
-require 'bdconnect.php';
+require '../config/bdconnect.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = filter_var(trim($_POST["email"]), FILTER_VALIDATE_EMAIL);
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION["username"] = $user['user_name'];
             echo "Login successful! Welcome, " . htmlspecialchars($user['user_name']) . ".";
             unset($_SESSION['captcha_answer']);
-            header("Location: index.php");
+            header("Location: ../index.html");
             exit();
         } else {
             echo "Invalid password.";
