@@ -15,7 +15,7 @@
     }
 
     #content {
-
+        font-family:"Poppins", sans-serif;
     }
 
     .gradient-section {
@@ -36,28 +36,28 @@
     }
 
     .section-highlight {
-        
+        padding: 4rem 1rem;
     }
 
     .section-highlight .text-orange {
-      color: #FF6600;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.9rem;
+        color: #FF6600;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
     }
 
     .btn-custom {
-      background-color: #000;
-      color: #fff;
-      border-radius: 25px;
-      padding: 0.6rem 1.5rem;
-      margin-top: 1rem;
-      text-decoration: none;
+        background-color: #000;
+        color: #fff;
+        border-radius: 25px;
+        padding: 0.6rem 1.5rem;
+        margin-top: 1rem;
+        text-decoration: none;
     }
 
     img {
-      width: 100%;
-      border-radius: 1rem;
+        width: 100%;
+        border-radius: 1rem;
     }
 
     @media (min-width: 768px) {
