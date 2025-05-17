@@ -23,16 +23,16 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="#apropos">À propos</a>
+            <a class="nav-link" href="#">À propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#projets">Projets</a>
+            <a class="nav-link" href="">Projets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#skills">Compétences</a>
+            <a class="nav-link" href="#">Compétences</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#formations">Formations</a>
+            <a class="nav-link" href="#">Formations</a>
           </li>
          
         </ul>

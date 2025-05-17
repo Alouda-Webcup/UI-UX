@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .container-fluid {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem; /* Pour laisser l'espace en bas */
+  }
+  
+  .flex-fill {
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+  }
+  
