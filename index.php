@@ -1,171 +1,134 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TheEnd - Dernier mot</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
-      color: #000;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    .hero {
-      text-align: center;
-      padding: 4rem 1rem;
-    }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    .gradient-section {
-      background: linear-gradient(120deg, #ffe0cc, #cfd9ff, #e0ccff);
-      padding: 4rem 1rem;
-      border-radius: 2rem;
-      margin: 2rem auto;
-    }
+    <link rel="stylesheet" href="assets/css/index.css">
 
-    .card-note {
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      border-radius: 1rem;
-    }
-
-    .features {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .features .icon {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .section-highlight {
-      padding: 4rem 1rem;
-    }
-
-    .section-highlight .text-orange {
-      color: #FF6600;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-    }
-
-    .btn-custom {
-      background-color: #000;
-      color: #fff;
-      border-radius: 25px;
-      padding: 0.6rem 1.5rem;
-      margin-top: 1rem;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 1rem;
-    }
-
-    @media (min-width: 768px) {
-      .section-highlight .row {
-        align-items: center;
-      }
-    }
-  </style>
+    <title>Accueil - TheEnd.page</title>
 </head>
+
+
 <body>
+<?php
+include('includes/navbar.php');
+?>
 
-  <!-- Header -->
-  <?php include('includes/navbar.php') ?>
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1 class="display-5 fw-bold">Parce que chaque fin<br>mérite un dernier mot.</h1>
-    <p class="lead mt-3">Ici, on ne tourne pas la page...<br>On la brûle, on la scotche, ou on la partage.</p>
-    <a href="#" class="btn btn-dark btn-lg mt-3 rounded-pill">Créer une page</a>
-    <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
-      <small>✨ Une carte rapide pour chacun</small>
-      <small>⚡ En ligne en quelques clics</small>
-      <small>📦 Les pages à partager dans la galerie</small>
-    </div>
-  </section>
-
-  <!-- Gradient Notes Section -->
-  <section class="gradient-section container">
-    <div class="row gy-4">
-      <div class="col-md-4">
-        <div class="card-note">
-          <img src="img1.jpg" alt="Note 1">
-          <p class="mt-2">🎉 Merci pour tous ces moments !</p>
+<br><br><br><br><br>
+<section id="home">
+    <div class="container">
+        <div class="row home justify-content-center align-items-center">
+            <div class="row text-center">
+                <h1 id="biggertitle">Parce que chaque fin <br> mérite un dernier mot.</h1>
+            </div>
+                <br><br>
+            <div class="row text-center">
+                <p>Ici, on ne tourne pas la page.</p>
+                <p>On la <b>brûle</b>, on la <b>customise</b>, on la <b>partage</b>.</p>
+                <a href="login.php" class="btn" id="btn">Créer ma page</a>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-note">
-          <img src="img2.jpg" alt="Note 2">
-          <p class="mt-2">📝 Juste un dernier mot chaleureux...</p>
+    </div>
+</section>
+
+<section class="gradient">
+
+</section>
+
+<br>
+
+<section id="howitworks">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="row text-center">
+                <p id="lilheader">Comment marche TheEnd.page ?</p>
+                <h1 id="title">Tu veux quitter quelque chose ou quelqu'un ? <br> Fais-le avec style.</h1>
+            </div>
+
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="p-5">
+                        <img src="assets/img/palette.png">
+                        <p id="content">Choisis ton style</p>
+                        <p>Rageur, doux-amer ou carrément cringe — tout est permis.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="p-5">
+                        <img src="assets/img/pen.png">
+                        <p id="content">Écris ton dernier mot</p>
+                        <p>Un message, une lettre, un cri du cœur ou un gif de chat qui pleure. Libre à toi.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class="p-5">
+                        <img src="assets/img/paper.png">
+                        <p id="content">Personnalise ta page</p>
+                        <p>Couleurs, sons, emojis, gifs, effets… fais-toi plaisir.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="p-5">
+                        <img src="assets/img/link.png">
+                        <p id="content">Partage le lien</p>
+                        <p>À ton boss, ton ex, ton groupe WhatsApp ou au monde entier. Ou pour toi, à toi de voir.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-6">
+                    <div class="p-5">
+                        <img src="assets/img/airplane.png">
+                        <p id="content">Boum!</p>
+                        <p>C’est fini. Ta page est en ligne. Ton message est là, intact, personnel, inoubliable.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-note">
-          <img src="img3.jpg" alt="Note 3">
-          <p class="mt-2">💌 Merci pour tout, on ne t'oubliera pas !</p>
+    </div>
+</section>
+
+<br>
+
+<section id="presentation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 justify-content-center align-items-center">
+                <div class="image-wrapper">
+                    <img src="assets/img/palmsupguy.png" id="imgpresentation" class="img-fluid">
+                </div>
+            </div>
+
+            <div class="col-lg-6 justify-content-center align-items-center">
+                <div class="row mx-auto">
+                    <p id="lilheader">C'est la fin? Fais-la craquer.</p>
+
+                    <h1 id="title">Ne pars pas sans dire un dernier mot.</h1>
+
+                    <p>TheEnd.page est une plateforme pour créer ta page de départ perso aussi stylée que libératrice.</p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <!-- Features -->
-  <section class="features container">
-    <h6 class="text-danger mb-2">Comment fonctionne TheEnd ?</h6>
-    <h2 class="fw-bold mb-5">Tu quittes quelque chose ou quelqu’un ?<br>Fais-le avec style.</h2>
-    <div class="row text-center">
-      <div class="col-md-3">
-        <div class="icon">🎨</div>
-        <p>Choisis ton style</p>
-      </div>
-      <div class="col-md-3">
-        <div class="icon">✍️</div>
-        <p>Écris ton dernier mot</p>
-      </div>
-      <div class="col-md-3">
-        <div class="icon">🧩</div>
-        <p>Personnalise ta page</p>
-      </div>
-      <div class="col-md-3">
-        <div class="icon">📤</div>
-        <p>Partage-la bien</p>
-      </div>
-    </div>
-  </section>
+<br>
 
-  <!-- Section 1 -->
-  <section class="section-highlight container">
-    <div class="row">
-      <div class="col-md-6">
-        <img src="man.jpg" alt="Homme">
-      </div>
-      <div class="col-md-6">
-        <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
-        <h3 class="fw-bold">Ne pars pas sans dire un dernier mot.</h3>
-        <p class="mt-3">TheEnd t’aide avec une plateforme pour créer ta page de départ pleine de style (ou de larmes).</p>
-        <a href="#" class="btn-custom">Créer une page</a>
-      </div>
-    </div>
-  </section>
+<?php
+include('includes/footer.php')
+?>
 
-  <!-- Section 2 -->
-  <section class="section-highlight container">
-    <div class="row flex-md-row-reverse">
-      <div class="col-md-6">
-        <img src="woman.jpg" alt="Femme">
-      </div>
-      <div class="col-md-6">
-        <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
-        <h3 class="fw-bold">Pourquoi faire ça ?</h3>
-        <p class="mt-3">Parce que parfois, une fin ça peut aussi faire du bien. Parce que cette vérité-là on la “partage confidentiellement”.</p>
-        <a href="#" class="btn-custom">Créer une page</a>
-      </div>
-    </div>
-  </section>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
