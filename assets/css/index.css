@@ -1,0 +1,16 @@
+.body {
+    font-family:"Poppins", sans-serif;
+    text:
+}
+
+#title {
+    font-family: "IBM Plex Sans", sans-serif;
+    color:black;
+}
+.btn {
+    color: #EE5622;
+}
+
+.btn:hover {
+    background-color: #FFF085;
+}

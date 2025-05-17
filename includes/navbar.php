@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Navbar</title>
-    <link rel="stylesheet" href="../assets/css/nav.css">
-    
-
-   
+    <link rel="stylesheet" href="/ui-ux/assets/css/nav.css">
 </head>
 
 <body>
@@ -23,7 +20,7 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav align-items-center">
           <li class="nav-item">
-            <a class="nav-link" href="#apropos">À propos</a>
+            <a class="nav-link" href="#howitworks">Comment ça marche ?</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#projets">Projets</a>
