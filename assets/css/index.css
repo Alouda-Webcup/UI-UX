@@ -7,20 +7,14 @@
     .hero {
       text-align: center;
       padding: 4rem 1rem;
+      font-family: ;
     }
 
     .gradient-section {
-      background: linear-gradient(120deg, #ffe0cc, #cfd9ff, #e0ccff);
+      background: linear-gradient(120deg, #FFF085, #FF9B17, #F16767);
       padding: 4rem 1rem;
       border-radius: 2rem;
       margin: 2rem auto;
-    }
-
-    .card-note {
-      background: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      border-radius: 1rem;
     }
 
     .features {
@@ -50,6 +44,7 @@
       border-radius: 25px;
       padding: 0.6rem 1.5rem;
       margin-top: 1rem;
+      text-decoration: none;
     }
 
     img {

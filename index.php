@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>TheEnd - Dernier mot</title>
+  <title>Accueil - TheEnd.page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/index.css">
@@ -16,7 +16,7 @@
   <!-- Hero -->
   <section class="hero">
     <h1 class="display-5 fw-bold">Parce que chaque fin<br>mérite un dernier mot.</h1>
-    <p class="lead mt-3">Ici, on ne tourne pas la page...<br>On la brûle, on la scotche, ou on la partage.</p>
+    <p class="lead mt-3">Ici, on ne tourne pas la page...<br>On la <b>brûle</b>, on la <b>customise</b>, et on la <b>partage</b>.</p>
     <a href="auth/login.php" class="btn btn-dark btn-lg mt-3 rounded-pill">Créer une page</a>
     <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
       <small>✨ Une carte rapide pour chacun</small>
@@ -28,24 +28,6 @@
   <!-- Gradient Notes Section -->
   <section class="gradient-section container">
     <div class="row gy-4">
-      <div class="col-md-4">
-        <div class="card-note">
-          <img src="img1.jpg" alt="Note 1">
-          <p class="mt-2">🎉 Merci pour tous ces moments !</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-note">
-          <img src="img2.jpg" alt="Note 2">
-          <p class="mt-2">📝 Juste un dernier mot chaleureux...</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card-note">
-          <img src="img3.jpg" alt="Note 3">
-          <p class="mt-2">💌 Merci pour tout, on ne t'oubliera pas !</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -55,20 +37,24 @@
     <h2 class="fw-bold mb-5">Tu quittes quelque chose ou quelqu’un ?<br>Fais-le avec style.</h2>
     <div class="row text-center">
       <div class="col-md-3">
-        <!--- <img src="assets/img/palette.png"> --->
-        <p>Choisis ton style</p>
+        <img src="assets/img/palette.png" class="img-fluid w-25">
+        <p><b>Choisis ton style</b></p>
+        <p>Rageur, doux-amer ou carrément cringe — tout est permis.</p>
       </div>
       <div class="col-md-3">
-        <div class="icon">✍️</div>
-        <p>Écris ton dernier mot</p>
+        <img src="assets/img/pen.png" class="img-fluid w-25">
+        <p><b>Écris ton dernier mot</b></p>
+        <p>Un message, une lettre, un cri du cœur ou un gif de chat qui pleure. Libre à toi.</p>
       </div>
       <div class="col-md-3">
-        <div class="icon">🧩</div>
-        <p>Personnalise ta page</p>
+        <img src="assets/img/paper.png" class="img-fluid w-25">
+        <p><b>Personnalise ta page</b></p>
+        <p>Couleurs, sons, emojis, gifs, effets… fais-toi plaisir.</p>
       </div>
       <div class="col-md-3">
-        <div class="icon">📤</div>
-        <p>Partage-la bien</p>
+        <img src="assets/img/airplane.png" class="img-fluid w-25">
+        <p><b>Partage le lien</b></p>
+        <p>À ton boss, ton ex, ton groupe WhatsApp ou au monde entier. Ou garde-le pour toi.</p>
       </div>
     </div>
   </section>
@@ -92,13 +78,13 @@
   <section class="section-highlight container">
     <div class="row flex-md-row-reverse">
       <div class="col-md-6">
-        <img src="woman.jpg" alt="Femme">
+        <img src="assets/img/palmsupgirl.png" alt="Femme">
       </div>
       <div class="col-md-6">
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold">Pourquoi faire ça ?</h3>
         <p class="mt-3">Parce que parfois, une fin ça peut aussi faire du bien. Parce que cette vérité-là on la “partage confidentiellement”.</p>
-        <a href="#" class="btn-custom">Créer une page</a>
+        <a href="auth/login.php" class="btn-custom">Créer une page</a>
       </div>
     </div>
   </section>
