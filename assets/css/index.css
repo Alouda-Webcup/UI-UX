@@ -1,23 +1,23 @@
 .body {
     font-family:"Poppins", sans-serif;
 }
- 
+
 #lilheader {
     font-family: "IBM Plex Sans", sans-serif;
     color:#EF5925
 }
- 
+
 #biggertitle {
     font-family: "IBM Plex Sans", sans-serif;
     color:black;
     font-size: 75px;
 }
- 
+
 #title {
     font-family: "IBM Plex Sans", sans-serif;
     color:black;
 }
- 
+
 #btn {
     background-color: black;
     color:white;
@@ -28,20 +28,20 @@
     margin: 0 auto;
     padding: 10px;
 }
- 
+
 #btn:hover {
     background-color:rgb(114, 114, 114);
     color:black;
 }
- 
+
 #imgpresentation {
     border-radius: 10px;
 }
- 
+
 #content {
     font-family:"Poppins", sans-serif;
 }
- 
+
 .gradient {
     background: #ff00fb;
     background: linear-gradient(90deg, rgba(255, 0, 251, 1) 0%, rgba(255, 201, 25, 1) 50%, rgba(83, 237, 219, 1) 100%);
