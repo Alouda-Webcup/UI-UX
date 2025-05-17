@@ -11,12 +11,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
 
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      /* height: 100%; supprimé pour éviter le scroll */
-    }
-
+   
     body {
       background-color: #f8f9fa;
       font-family: 'Segoe UI', sans-serif;
@@ -27,7 +22,7 @@
       max-width: 1200px;
       margin: 1rem auto; /* réduit la marge verticale */
       padding: 0 1rem;
-      text-align: center;
+      text-align: left;
     }
 
     .pages-container {
@@ -47,7 +42,6 @@
       max-width: 350px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
     .page-title {
@@ -65,6 +59,11 @@
       color: #666;
       font-weight: 500;
       font-size: 1rem;
+    }
+
+    .page-link{
+      color: #e74c3c  !important;
+      text-decoration: underline !important;
     }
 
     .mood-happy {
@@ -86,28 +85,23 @@
       margin-bottom: 1.5rem;
     }
 
-    .page-link {
-      color: #EE5622;
-      text-decoration: underline;
-      font-weight: 500;
-      align-self: flex-start;
-      transition: color 0.3s ease;
-    }
-
-    .page-link:hover {
-      color: #c6471c;
-    }
-
+    
     h2.text-orange {
       color: #EE5622;
       margin-top: 0;       /* suppression de la marge haute */
       margin-bottom: 1.5rem; /* marge raisonnable sous le titre */
+      text-align: center;
     }
 
     @media (max-width: 767px) {
       .page-card + .page-card {
         margin-top: 1.5rem;
       }
+     
+    }
+    .all{
+      margin-top: 7rem;
+      
     }
   </style>
 </head>
@@ -116,7 +110,7 @@
 
 <?php include('../includes/navbar.php') ?>
 
-<div class="container">
+<div class="container all">
   <h2 class="text-orange fw-bold">Mes pages</h2>
 
   <div class="pages-container">
@@ -158,5 +152,6 @@
   </div>
 </div>
 
+<?php include('../includes/footer.php');?>
 </body>
 </html>
