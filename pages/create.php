@@ -1,26 +1,44 @@
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <title>TheEnd.page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Luckiest+Guy&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/create.css" />
 </head>
 <body>
+
+<?php 
+include("../includes/navbar.php"); 
+?>
+
   <button id="toggleSidebar" aria-expanded="true" aria-controls="formSidebar">≡ Menu</button>
 
-  <div id="formSidebar">
-    <h2 class="mb-4 text-success">// Crée ta sortie</h2>
+  <div id="formSidebar" class="hidden">
+   
     <form id="mainForm" onsubmit="return false;">
+        
       <div class="mb-3">
         <label for="titre" class="form-label">&gt; Titre</label>
         <input type="text" class="form-control" id="titre" placeholder="TheEnd.page" />
+      </div>
+      <div class="mb-3">
+        <label for="titreColor" class="form-label">🎨 Couleur du titre</label>
+        <input type="color" id="titreColor" value="#ffffff" />
       </div>
 
       <div class="mb-3">
         <label for="pseudo" class="form-label">&gt; Pseudo</label>
         <input type="text" class="form-control" id="pseudo" placeholder="e.g. HackerMax2000" />
+      </div>
+      <div class="mb-3">
+         <label for="pseudoColor" class="form-label">🎨 Couleur du pseudo</label>
+         <input type="color" id="pseudoColor" value="#ffffff" />
       </div>
 
       <div class="mb-3">
@@ -31,7 +49,7 @@
           <option>Rageux 💢</option>
           <option>Touchant 😭</option>
           <option>Poétique 🌙</option>
-          <option>Cringe 🌈</option>
+          <option>Cringe 💀</option>
         </select>
       </div>
 
@@ -41,8 +59,17 @@
       </div>
 
       <div class="mb-3">
+         <label for="volumeControl" class="form-label">🔊 Volume du son</label>
+         <input type="range" class="form-range" min="0" max="1" step="0.01" id="volumeControl" value="1" />
+      </div>
+
+      <div class="mb-3">
         <label for="message" class="form-label">&gt; Message final</label>
         <textarea class="form-control" id="message" rows="5" placeholder="echo 'Goodbye world';"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="messageColor" class="form-label">🎨 Couleur du message</label>
+        <input type="color" id="messageColor" value="#ffffff" />
       </div>
 
     <div class="mb-3">
@@ -55,16 +82,23 @@
   </div>
 
   <div class="preview-area sidebar-open" id="previewArea" style="position: relative;">
-    <div class="a4-sheet" id="previewBox" style="position: relative; overflow: hidden;">
-      <div class="preview-box">
-        <div class="title-main" id="previewTitre">TheEnd.page</div>
-        <div id="previewPseudo">[Pseudo]</div>
-        <p id="previewMessage">[Message]</p>
-      </div>
+  <div class="a4-sheet" id="previewBox" style="position: relative; overflow: hidden;">
+    <div class="preview-box">
+      <div class="title-main" id="previewTitre">TheEnd.page</div>
+      <div id="previewPseudo">[Pseudo]</div>
+      <p id="previewMessage">[Message]</p>
     </div>
   </div>
 
-  <audio id="backgroundAudio"></audio>
+  
+  <div style="display: flex; justify-content: center; margin-bottom: 20px; gap: 20px;">
+    <button id="publishBtn" class="btn btn-publish btn-lg">Publier</button>
+    <button id="saveBtn" class="btn btn-save btn-lg">Enregistrer</button>
+  </div>
+</div>
+
+<audio id="backgroundAudio"></audio>
+
 
   <script>
     const toggleSidebarBtn = document.getElementById("toggleSidebar");
@@ -93,17 +127,21 @@
       "Rageux 💢": "../assets/sound/rageante.mp3",
       "Touchant 😭": "../assets/sound/touchante.mp3",
       "Poétique 🌙": "../assets/sound/poetique.mp3",
-      "Cringe 🌈": "../assets/sound/cringe.mp3"
+      "Cringe 💀": "../assets/sound/cringe.mp3"
     };
 
     let animationInterval;
 
-    toggleSidebarBtn.addEventListener("click", () => {
-      const isHidden = formSidebar.classList.toggle("hidden");
-      toggleSidebarBtn.setAttribute("aria-expanded", isHidden ? "false" : "true");
-      previewArea.classList.toggle("sidebar-open", !isHidden);
-      previewArea.classList.toggle("sidebar-closed", isHidden);
-    });
+   toggleSidebarBtn.addEventListener("click", () => {
+  const isHidden = formSidebar.classList.toggle("hidden");
+  toggleSidebarBtn.setAttribute("aria-expanded", isHidden ? "false" : "true");
+  previewArea.classList.toggle("sidebar-open", !isHidden);
+  previewArea.classList.toggle("sidebar-closed", isHidden);
+
+  // Ajoute ou enlève la classe "small" sur le bouton
+  toggleSidebarBtn.classList.toggle("small", !isHidden);
+});
+
 
     function clearRain() {
       const drops = previewBox.querySelectorAll(".rain-drop");
@@ -192,14 +230,14 @@
           previewBox.style.background = "linear-gradient(45deg, #b19cd9, #283593)";
           previewBox.style.color = "#e0d7f5";
           break;
-        case "Cringe 🌈":
+        case "Cringe 💀":
           previewBox.classList.add("cringe-background");
           break;
       }
     }
 
     function updateAudio(tone) {
-      const isCringe = tone === "Cringe 🌈";
+      const isCringe = tone === "Cringe 💀";
 
       if (toggleMusicCheckbox.checked && tonesMusic[tone]) {
         audio.pause();
@@ -234,6 +272,34 @@
         audio.ontimeupdate = null;
       }
     }
+
+    const volumeControl = document.getElementById("volumeControl");
+
+// Active/désactive le slider volume selon checkbox
+function updateVolumeControlState() {
+  volumeControl.disabled = !toggleMusicCheckbox.checked;
+}
+
+toggleMusicCheckbox.addEventListener("change", () => {
+  updateVolumeControlState();
+  if (!toggleMusicCheckbox.checked) {
+    audio.pause();
+    audio.removeAttribute("src");
+    audio.ontimeupdate = null;
+  } else {
+    updateAudio(tonSelect.value);
+  }
+});
+
+// Met à jour le volume de l’audio en temps réel
+volumeControl.addEventListener("input", () => {
+  audio.volume = volumeControl.value;
+});
+
+// Initialisation de l’état au chargement
+updateVolumeControlState();
+audio.volume = volumeControl.value;
+
 
     function updatePreview() {
       const tone = tonSelect.value;
@@ -409,6 +475,31 @@
       document.removeEventListener("touchmove", dragMove);
       document.removeEventListener("touchend", dragEnd);
     }
+
+    const titreColorInput = document.getElementById("titreColor");
+const pseudoColorInput = document.getElementById("pseudoColor");
+const messageColorInput = document.getElementById("messageColor");
+
+titreColorInput.addEventListener("input", () => {
+  previewTitre.style.color = titreColorInput.value;
+});
+
+pseudoColorInput.addEventListener("input", () => {
+  previewPseudo.style.color = pseudoColorInput.value;
+});
+
+messageColorInput.addEventListener("input", () => {
+  previewMessage.style.color = messageColorInput.value;
+});
+
+document.addEventListener("click", (e) => {
+  // Si on clique sur un GIF ou un de ses enfants, ne rien faire
+  if (selectedGif && !selectedGif.contains(e.target)) {
+    selectedGif.classList.remove("selected");
+    selectedGif = null;
+  }
+});
+
     
 
     // Initial update
