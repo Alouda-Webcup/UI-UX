@@ -47,44 +47,45 @@ include('includes/navbar.php');
             </div>
 
             <div class="row justify-content-center align-items-center text-center">
-                <div class="col-lg-3 col-md-3 col-sm-5">
+                <div class="col-lg-3 col-md-3 col-sm-3">
                     <div class="p-3">
                         <img src="assets/img/palette.png">
                         <p id="content">Choisis ton style</p>
+                        <p>Rageur, doux-amer ou carrément cringe — tout est permis.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-5 testing2">
+                <div class="col-lg-3 col-md-3 col-sm-3">
                     <div class="p-3">
                         <img src="assets/img/pen.png">
                         <p id="content">Écris ton dernier mot</p>
+                        <p>Un message, une lettre, un cri du cœur ou un gif de chat qui pleure. Libre à toi.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-7">
+                <div class="col-lg-3 col-md-3 col-sm-3">
                     <div class="p-3">
                         <img src="assets/img/paper.png">
                         <p id="content">Personnalise ta page</p>
+                        <p>Couleurs, sons, emojis, gifs, effets… fais-toi plaisir.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-3 col-md-4 col-sm-7">
-                    <div class="p-3 border bg-light">
-
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <img src="assets/img/link.png">
+                        <p id="content">Partage le lien</p>
+                        <p>À ton boss, ton ex, ton groupe WhatsApp ou au monde entier. Ou garde-le pour toi.</p>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-2 testing2">
-                    <div class="p-3 border bg-dark">
-
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-4 col-sm-7">
-                    <div class="p-3 border bg-light">
-
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="p-3">
+                        <img src="assets/img/airplane.png">
+                        <p id="content">Boum!</p>
+                        <p>C’est fini. Ta page est en ligne. Ton message est là, intact, personnel, inoubliable.</p>
                     </div>
                 </div>
             </div>
