@@ -11,8 +11,8 @@ session_start();
 
 $host = "localhost"; 
 $dbname = "alouda_db";
-$username = "root";
-$password = "";
+$username = "alouda_db";
+$password = "dacram-nIpqes-xinji9";
 
 // Connexion avec PDO
 try {
