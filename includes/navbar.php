@@ -172,7 +172,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav" role="menu" aria-label="Menu principal">
           <li class="nav-item" role="none">
-            <a class="nav-link fw-normal" href="index.php" role="menuitem" tabindex="0">Accueil</a>
+            <a class="nav-link fw-normal" href="../index.php" role="menuitem" tabindex="0">Accueil</a>
           </li>
           <li class="nav-item" role="none">
             <a class="nav-link fw-normal" href="../pages/create.php" role="menuitem" tabindex="0">Créer une page</a>
