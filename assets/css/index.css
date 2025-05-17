@@ -2,17 +2,27 @@
     font-family:"Poppins", sans-serif;
 }
 
+#lilheader {
+    font-family: "IBM Plex Sans", sans-serif;
+    color:#EF5925
+}
+
 #title {
     font-family: "IBM Plex Sans", sans-serif;
     color:black;
 }
 
-.btn {
-    color: #EE5622;
+#btn {
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    width: 200px;
+    height: 60px;
 }
 
-.btn:hover {
-    background-color: #FFF085;
+#btn:hover {
+    background-color:white;
+    color:black;
 }
 
 #imgpresentation {

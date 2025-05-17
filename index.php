@@ -28,7 +28,7 @@ include('includes/navbar.php');
                 <br>
                 <p>Ici, on ne tourne pas la page.</p>
                 <p>On la brûle, on la customise, on la partage.</p>
-                <a href="#" class="btn">Créer ma page</a>
+                <a href="#" class="btn" id="btn" style="text-align: center;">Créer ma page</a>
             </div>
         </div>
     </div>
@@ -37,6 +37,11 @@ include('includes/navbar.php');
 <section id="howitworks">
     <div class="container">
         <div class="row justify-content-center align-items-center">
+            <div class="row text-center">
+                <p id="lilheader">Comment marche TheEnd.page ?</p>
+                <h1 id="title">Tu veux quitter quelque chose ou quelqu'un ? Fais le avec style.</h1>
+            </div>
+
 
         </div>
     </div>
@@ -46,12 +51,12 @@ include('includes/navbar.php');
     <div class="container">
         <div class="col-lg-6 col-md-3 justify-content-center align-items-center">
             <div class="image-wrapper">
-                <img src="assets/img/palmsupguy.png" id="imgpresentation">
+                <img src="assets/img/palmsupguy.png" id="imgpresentation" class="img-fluid">
             </div>
         </div>
 
         <div class="col-lg-6 justify-content-center align-items-center">
-            
+            <p id="lilheader">C'est la fin? Fais-la craquer.</p>
         </div>
     </div>
 </section>
