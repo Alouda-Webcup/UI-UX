@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="assets/css/index.css">
 
     <title>Accueil - TheEnd.page</title>
 </head>
@@ -44,12 +44,14 @@ include('includes/navbar.php');
 
 <section id="presentation">
     <div class="container">
-        <div class="col-lg-6 justify-content-center align-items-center">
-
+        <div class="col-lg-6 col-md-3 justify-content-center align-items-center">
+            <div class="image-wrapper">
+                <img src="assets/img/palmsupguy.png" id="imgpresentation">
+            </div>
         </div>
 
         <div class="col-lg-6 justify-content-center align-items-center">
-        
+            
         </div>
     </div>
 </section>
