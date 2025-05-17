@@ -16,8 +16,10 @@
     background-color: black;
     color:white;
     border-radius: 10px;
-    width: 200px;
-    height: 60px;
+    width: 150px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
 }
 
 #btn:hover {
@@ -26,5 +28,9 @@
 }
 
 #imgpresentation {
-    border-radius: 20px;
+    border-radius: 10px;
+}
+
+#content {
+    font-family:"Poppins", sans-serif;
 }

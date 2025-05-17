@@ -25,38 +25,87 @@ include('includes/navbar.php');
         <div class="row home align-items-center">
             <div class="row text-center">
                 <h1 id="title">Parce que chaque fin mérite un dernier mot.</h1>
+            </div>
                 <br>
+            <div class="row text-center">
                 <p>Ici, on ne tourne pas la page.</p>
-                <p>On la brûle, on la customise, on la partage.</p>
-                <a href="#" class="btn" id="btn" style="text-align: center;">Créer ma page</a>
+                <p>On la <b>brûle</b>, on la <b>customise</b>, on la <b>partage</b>.</p>
+                <a href="#" class="btn" id="btn">Créer ma page</a>
             </div>
         </div>
     </div>
 </section>
+
+<br>
 
 <section id="howitworks">
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="row text-center">
                 <p id="lilheader">Comment marche TheEnd.page ?</p>
-                <h1 id="title">Tu veux quitter quelque chose ou quelqu'un ? Fais le avec style.</h1>
+                <h1 id="title">Tu veux quitter quelque chose ou quelqu'un ? Fais-le avec style.</h1>
             </div>
 
+            <div class="row justify-content-center align-items-center text-center">
+                <div class="col-lg-3 col-md-3 col-sm-5">
+                    <div class="p-3">
+                        <img src="assets/img/palette.png">
+                        <p id="content">Choisis ton style</p>
+                    </div>
+                </div>
 
+                <div class="col-lg-3 col-md-3 col-sm-5 testing2">
+                    <div class="p-3">
+                        <img src="assets/img/pen.png">
+                        <p id="content">Écris ton dernier mot</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-7">
+                    <div class="p-3">
+                        <img src="assets/img/paper.png">
+                        <p id="content">Personnalise ta page</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-3 col-md-4 col-sm-7">
+                    <div class="p-3 border bg-light">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-2 testing2">
+                    <div class="p-3 border bg-dark">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-7">
+                    <div class="p-3 border bg-light">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<br>
+
 <section id="presentation">
     <div class="container">
-        <div class="col-lg-6 col-md-3 justify-content-center align-items-center">
+        <div class="col-lg-6 justify-content-center align-items-center">
             <div class="image-wrapper">
                 <img src="assets/img/palmsupguy.png" id="imgpresentation" class="img-fluid">
             </div>
         </div>
 
         <div class="col-lg-6 justify-content-center align-items-center">
-            <p id="lilheader">C'est la fin? Fais-la craquer.</p>
+            <div class="row text-center">
+                <p id="lilheader">C'est la fin? Fais-la craquer.</p>
+            </div>
         </div>
     </div>
 </section>
