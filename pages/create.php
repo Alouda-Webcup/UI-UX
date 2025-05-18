@@ -17,7 +17,9 @@
 include("../includes/navbar.php"); 
 ?>
 
-  <button id="toggleSidebar" aria-expanded="true" aria-controls="formSidebar">≡ Menu</button>
+ <button id="toggleSidebar" aria-expanded="true" aria-controls="formSidebar" class="menu-toggle">
+  <span class="arrow">&#9654;</span>
+</button>
 
   <div id="formSidebar" class="hidden">
    
@@ -25,7 +27,7 @@ include("../includes/navbar.php");
         
       <div class="mb-3">
         <label for="titre" class="form-label">&gt; Titre</label>
-        <input type="text" class="form-control" id="titre" placeholder="TheEnd.page" />
+        <input type="text" class="form-control" id="titre" placeholder="TheEnd.page" maxlength="20" />
       </div>
       <div class="mb-3">
         <label for="titreColor" class="form-label">🎨 Couleur du titre</label>
@@ -34,7 +36,7 @@ include("../includes/navbar.php");
 
       <div class="mb-3">
         <label for="pseudo" class="form-label">&gt; Pseudo</label>
-        <input type="text" class="form-control" id="pseudo" placeholder="e.g. HackerMax2000" />
+        <input type="text" class="form-control" id="pseudo" placeholder="e.g. HackerMax2000" maxlength="10"/>
       </div>
       <div class="mb-3">
          <label for="pseudoColor" class="form-label">🎨 Couleur du pseudo</label>
@@ -65,7 +67,7 @@ include("../includes/navbar.php");
 
       <div class="mb-3">
         <label for="message" class="form-label">&gt; Message final</label>
-        <textarea class="form-control" id="message" rows="5" placeholder="echo 'Goodbye world';"></textarea>
+        <textarea class="form-control" id="message" rows="5" placeholder="echo 'Goodbye world'; " maxlength="250"></textarea>
       </div>
       <div class="mb-3">
         <label for="messageColor" class="form-label">🎨 Couleur du message</label>
@@ -81,7 +83,7 @@ include("../includes/navbar.php");
     </form>
   </div>
 
-  <div class="preview-area sidebar-open" id="previewArea" style="position: relative;">
+<div class="preview-area sidebar-closed" id="previewArea" style="position: relative;">
   <div class="a4-sheet" id="previewBox" style="position: relative; overflow: hidden;">
     <div class="preview-box">
       <div class="title-main" id="previewTitre">TheEnd.page</div>
@@ -93,7 +95,7 @@ include("../includes/navbar.php");
   
   <div style="display: flex; justify-content: center; margin-bottom: 20px; gap: 20px;">
     <button id="publishBtn" class="btn btn-publish btn-lg">Publier</button>
-    <button id="saveBtn" class="btn btn-save btn-lg">Enregistrer</button>
+    <button id="saveBtn" class="btn btn-success btn-lg">Enregistrer</button>
   </div>
 </div>
 
@@ -132,15 +134,33 @@ include("../includes/navbar.php");
 
     let animationInterval;
 
-   toggleSidebarBtn.addEventListener("click", () => {
-  const isHidden = formSidebar.classList.toggle("hidden");
-  toggleSidebarBtn.setAttribute("aria-expanded", isHidden ? "false" : "true");
-  previewArea.classList.toggle("sidebar-open", !isHidden);
-  previewArea.classList.toggle("sidebar-closed", isHidden);
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleSidebarBtn = document.getElementById("toggleSidebar");
+  const formSidebar = document.getElementById("formSidebar");
+  const arrow = toggleSidebarBtn.querySelector(".arrow");
 
-  // Ajoute ou enlève la classe "small" sur le bouton
-  toggleSidebarBtn.classList.toggle("small", !isHidden);
+toggleSidebarBtn.addEventListener("click", () => {
+  const isHidden = formSidebar.classList.toggle("hidden");
+
+  toggleSidebarBtn.setAttribute("aria-expanded", !isHidden);
+  formSidebar.setAttribute("aria-hidden", isHidden);
+
+  if (isHidden) {
+    arrow.classList.add("closed");
+    toggleSidebarBtn.style.left = "10px";
+    previewArea.classList.remove("shifted-right");
+    previewArea.classList.add("sidebar-closed");
+  } else {
+    arrow.classList.remove("closed");
+    toggleSidebarBtn.style.left = "300px";
+    previewArea.classList.remove("sidebar-closed");
+    previewArea.classList.add("shifted-right");
+  }
 });
+
+});
+
+
 
 
     function clearRain() {
@@ -339,7 +359,14 @@ audio.volume = volumeControl.value;
 
       launchAnimations();
       animationInterval = setInterval(launchAnimations, 3000);
-    }
+    
+
+    const previewMessageHeight = previewMessage.scrollHeight;
+  const minHeight = 600; // hauteur minimum souhaitée (exemple)
+  const newHeight = previewMessageHeight + 200; // 200px = marge pour titre, pseudo, etc.
+
+  previewBox.style.height = Math.max(minHeight, newHeight) + "px";
+}
 
     titreInput.addEventListener("input", updatePreview);
     pseudoInput.addEventListener("input", updatePreview);
@@ -499,6 +526,45 @@ document.addEventListener("click", (e) => {
     selectedGif = null;
   }
 });
+
+function adjustPreviewBoxHeight() {
+  const previewBox = document.getElementById("previewBox");
+  const previewMessage = document.getElementById("previewMessage");
+
+  const minHeight = 842;
+  const neededHeight = previewMessage.scrollHeight + 40; // petit offset pour le padding
+  const newHeight = Math.max(minHeight, neededHeight);
+
+  previewBox.style.height = newHeight + "px";
+
+  // On remet le scroll en haut au cas où
+  previewBox.scrollTop = 0;
+}
+
+
+// Surveille les changements
+document.getElementById("message").addEventListener("input", () => {
+  adjustPreviewBoxHeight();
+});
+
+// Au chargement initial
+window.addEventListener("load", () => {
+  adjustPreviewBoxHeight();
+});
+
+messageInput.addEventListener('input', () => {
+  let words = messageInput.value.trim().split(/\s+/);
+
+  if (words.length > 100) {
+    // Récupérer seulement les 100 premiers mots
+    words = words.slice(0, 100);
+    messageInput.value = words.join(' ');
+  }
+  updatePreview(); // Met à jour l'aperçu aussi à chaque saisie
+});
+
+
+
 
     
 
