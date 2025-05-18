@@ -185,17 +185,15 @@ $username = $logged_in ? $_SESSION['username'] : '';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="menu" aria-label="Menu principal">
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="../index.php" role="menuitem" aria-current="<?= $current_page == 'index.php' ? 'page' : 'false' ?>">Accueil</a>
+          <a class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="../index.php" role="menuitem" >Accueil</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'info.php' ? 'active' : '' ?>" href="info.php" role="menuitem" aria-current="<?= $current_page == 'info.php' ? 'page' : 'false' ?>">Info</a>
+          <a class="nav-link <?= $current_page == 'create.php' ? 'active' : '' ?>" href="/ui-ux/pages/create.php" role="menuitem">Créer une page</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php" role="menuitem" aria-current="<?= $current_page == 'contact.php' ? 'page' : 'false' ?>">Contact</a>
+          <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="/ui-ux/pages/project.php" role="menuitem" >Mes pages</a>
         </li>
-        <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'faq.php' ? 'active' : '' ?>" href="faq.php" role="menuitem" aria-current="<?= $current_page == 'faq.php' ? 'page' : 'false' ?>">FAQ</a>
-        </li>
+    
       </ul>
 
       <?php if ($logged_in): ?>
@@ -205,9 +203,9 @@ $username = $logged_in ? $_SESSION['username'] : '';
           </svg>
           <?= htmlspecialchars($username) ?>
         </span>
-        <a href="../auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
+        <a href="/ui-ux/auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
       <?php else: ?>
-        <a href="../auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
+        <a href="/ui-ux/auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
       <?php endif; ?>
     </div>
   </div>
