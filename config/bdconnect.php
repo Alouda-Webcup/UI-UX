@@ -1,10 +1,13 @@
 <?php
 $host = "localhost"; 
 $dbname = "alouda_db";
-// $username = "alouda_db";
-// $password = "dacram-nIpqes-xinji9";
-$username = "root";
-$password = "root";
+
+$username = "alouda_db";
+//$username = "root";
+//$password = "root";
+$password = "dacram-nIpqes-xinji9";
+
+
 
 
 // Connexion avec PDO
