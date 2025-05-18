@@ -16,8 +16,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($password, $user['user_password'])) {
+        // Définir les variables de session nécessaires
         $_SESSION['user_id'] = $user['id_users'];
-        $_SESSION['user_name'] = $user['user_name'];
+        $_SESSION['username'] = $user['user_name'];   // clé username pour le navbar
+        $_SESSION['logged_in'] = true;                 // clé logged_in pour vérifier la connexion
+
         $success = "Connexion réussie ! Redirection en cours...";
     } else {
         $error = "Email ou mot de passe incorrect.";

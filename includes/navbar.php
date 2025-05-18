@@ -114,6 +114,13 @@ $username = $logged_in ? $_SESSION['username'] : '';
       cursor: pointer;
     }
 
+    .user-icon {
+      display: inline-flex;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      fill: #EE5622;
+    }
+
     @media (max-width: 991.98px) {
       .navbar-capsule {
         width: auto;
@@ -178,21 +185,29 @@ $username = $logged_in ? $_SESSION['username'] : '';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="menu" aria-label="Menu principal">
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page === 'index.php' ? 'active' : '' ?>" href="../index.php" role="menuitem">Accueil</a>
+          <a class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="../index.php" role="menuitem" aria-current="<?= $current_page == 'index.php' ? 'page' : 'false' ?>">Accueil</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page === 'create.php' ? 'active' : '' ?>" href="../pages/create.php" role="menuitem">Créer une page</a>
+          <a class="nav-link <?= $current_page == 'info.php' ? 'active' : '' ?>" href="info.php" role="menuitem" aria-current="<?= $current_page == 'info.php' ? 'page' : 'false' ?>">Info</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page === 'project.php' ? 'active' : '' ?>" href="../pages/project.php" role="menuitem">Mes pages</a>
+          <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="contact.php" role="menuitem" aria-current="<?= $current_page == 'contact.php' ? 'page' : 'false' ?>">Contact</a>
+        </li>
+        <li class="nav-item" role="none">
+          <a class="nav-link <?= $current_page == 'faq.php' ? 'active' : '' ?>" href="faq.php" role="menuitem" aria-current="<?= $current_page == 'faq.php' ? 'page' : 'false' ?>">FAQ</a>
         </li>
       </ul>
 
       <?php if ($logged_in): ?>
-        <span class="me-3 text-dark fw-medium">Bonjour, <?= htmlspecialchars($username) ?></span>
-        <a href="../auth/logout.php" class="btn btn-cta" role="button">Déconnexion</a>
+        <span class="navbar-text me-3" aria-label="Utilisateur connecté">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="user-icon" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+          </svg>
+          <?= htmlspecialchars($username) ?>
+        </span>
+        <a href="logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
       <?php else: ?>
-        <a href="../auth/login.php" class="btn btn-cta" role="button">Connexion</a>
+        <a href="login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
       <?php endif; ?>
     </div>
   </div>
