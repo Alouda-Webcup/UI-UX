@@ -205,9 +205,9 @@ $username = $logged_in ? $_SESSION['username'] : '';
           </svg>
           <?= htmlspecialchars($username) ?>
         </span>
-        <a href="logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
+        <a href="../auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
       <?php else: ?>
-        <a href="login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
+        <a href="../auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
       <?php endif; ?>
     </div>
   </div>
