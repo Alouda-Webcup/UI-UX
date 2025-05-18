@@ -82,7 +82,7 @@
 
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
             <br>
-        <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
+        <p class="text-orange">C’est bien la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold" id="title2">Ne pars pas sans dire un dernier mot.</h3>
         <p class="mt-3">TheEnd.page t’aide pour créer ta page de départ pleine de style (ou de larmes).</p>
         <br>
