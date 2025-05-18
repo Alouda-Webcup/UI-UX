@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -86,6 +89,10 @@
       white-space: nowrap;
       margin-left: 1.5rem;
       transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .btn-cta:hover,
     .btn-cta:focus {
@@ -104,7 +111,7 @@
     @media (max-width: 991.98px) {
       .navbar-capsule {
         width: auto;
-        margin: 2rem 1rem; /* marge gauche/droite de 1rem */
+        margin: 2rem 1rem;
         padding: 1rem 1.5rem;
         min-width: auto;
         box-sizing: border-box;
@@ -181,7 +188,13 @@
             <a class="nav-link fw-normal" href="../pages/project.php" role="menuitem" tabindex="0">Mes pages</a>
           </li>
         </ul>
-        <a href="#" class="btn btn-cta" role="button" tabindex="0">Déconnexion</a>
+
+        <?php if (isset($_SESSION['user'])): ?>
+          <a href="../auth/logout.php" class="btn btn-cta" role="button" tabindex="0">Déconnexion</a>
+        <?php else: ?>
+          <a href="../auth/login.php" class="btn btn-cta" role="button" tabindex="0">Connexion</a>
+        <?php endif; ?>
+
       </div>
     </div>
   </nav>
@@ -190,4 +203,3 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
- 
