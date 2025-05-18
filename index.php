@@ -19,9 +19,7 @@
  
  
 <body>
-<?php
-include('includes/navbar.php');
-?>
+
  
   <!-- Header -->
   <?php include('includes/navbar.php') ?>
