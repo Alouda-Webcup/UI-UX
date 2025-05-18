@@ -24,7 +24,7 @@
   <?php include('includes/navbar.php') ?>
  
   <!-- Hero -->
-  <section class="hero zoom-in">
+  <section class="hero" data-aos="zoom-in">
     <h1 class="display-5 fw-bold" id="title1">Parce que chaque fin<br>mérite un dernier mot.</h1>
     <p class="lead mt-3 delay-2">Ici, on ne tourne pas la page...<br>On la <b>brûle</b>, on la <b>customise</b>, et on la <b>partage</b>.</p>
     <a href="auth/login.php" class="btn btn-dark btn-lg mt-3 rounded-pill">Créer une page</a>
@@ -34,12 +34,55 @@
       <small>📦 Les pages à partager dans la galerie</small>
     </div>
   </section>
- 
- 
-  <!-- Gradient Notes Section -->
-  <section class="gradient-section container">
-    <div class="row gy-4"></div>
-  </section>
+ <br>
+
+  <!--Carousel-->
+  <section>
+    <div class="row">
+    <h1 class="display-5 fw-bold" id="title3"> Les meilleures pages selon nos utilisateurs !</h1>
+    <div class="carousel-container position-relative justify-content-center align-content-center">
+      <div class="carousel-wrapper" id="custom-carousel">
+  
+        <!-- Frontend -->
+        <div class="carousel-slide active">
+          <div class="skill-box text-center">
+            <h5 class="mb-4">Test</h5>
+            <div class="row">
+              <div class="col-6 mb-4">
+                <div><strong>3</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="carousel-slide">
+          <div class="skill-box text-center">
+            <h5 class="mb-4">Test</h5>
+            <div class="row">
+              <div class="col-6 mb-4">
+                <div><strong>2</strong></div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+    <div class="carousel-slide">
+  <div class="skill-box text-center">
+    <h5 class="mb-4">Test</h5>
+    <div class="row">
+      <div class="col-6 mb-4">
+        <div><strong>1</strong></div> 
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
  
  
   <!-- Mini Tutoriel -->
@@ -115,6 +158,34 @@
   });
 </script>
 
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  let current = 1;
+
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.remove('left', 'center', 'right');
+      if (index === current) {
+        slide.classList.add('center');
+      } else if (index === (current - 1 + slides.length) % slides.length) {
+        slide.classList.add('left');
+      } else if (index === (current + 1) % slides.length) {
+        slide.classList.add('right');
+      }
+    });
+  }
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      if (index !== current) {
+        current = index;
+        updateCarousel();
+      }
+    });
+  });
+
+  window.addEventListener('DOMContentLoaded', updateCarousel);
+</script>
 
 </body>
 </html>
