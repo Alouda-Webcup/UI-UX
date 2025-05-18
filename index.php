@@ -38,9 +38,8 @@
 
   <!--Carousel-->
   <section>
-    <div class="row">
-    <h1 class="display-5 fw-bold" id="title3"> Les meilleures pages selon nos utilisateurs !</h1>
-    <div class="carousel-container position-relative justify-content-center align-content-center">
+    <div class="carousel-container justify-items-center align-content-center ">
+      <h1 class="display-5 fw-bold" id="title3"> Les meilleures pages selon nos utilisateurs !</h1>
       <div class="carousel-wrapper" id="custom-carousel">
   
         <!-- Frontend -->
