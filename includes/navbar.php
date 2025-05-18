@@ -188,10 +188,10 @@ $username = $logged_in ? $_SESSION['username'] : '';
           <a class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="../index.php" role="menuitem" >Accueil</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'create.php' ? 'active' : '' ?>" href="/ui-ux/pages/create.php" role="menuitem">Créer une page</a>
+          <a class="nav-link <?= $current_page == 'create.php' ? 'active' : '' ?>" href="../pages/create.php" role="menuitem">Créer une page</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="/ui-ux/pages/project.php" role="menuitem" >Mes pages</a>
+          <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="../pages/project.php" role="menuitem" >Mes pages</a>
         </li>
     
       </ul>
@@ -203,9 +203,9 @@ $username = $logged_in ? $_SESSION['username'] : '';
           </svg>
           <?= htmlspecialchars($username) ?>
         </span>
-        <a href="/ui-ux/auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
+        <a href="../auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
       <?php else: ?>
-        <a href="/ui-ux/auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
+        <a href="../auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
       <?php endif; ?>
     </div>
   </div>
