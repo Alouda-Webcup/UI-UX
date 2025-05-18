@@ -80,9 +80,11 @@
         <img src="assets/img/palmsupguy.png">
       </div>
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="900">
+        <br>
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold" id="title2">Ne pars pas sans dire un dernier mot.</h3>
         <p class="mt-3">TheEnd t’aide avec une plateforme pour créer ta page de départ pleine de style (ou de larmes).</p>
+        <br>
         <a href="auth/login.php" class="btn-custom">Créer une page</a>
       </div>
     </div>
@@ -95,9 +97,11 @@
         <img src="assets/img/palmsupgirl.png">
       </div>
       <div class="col-md-6" data-aos="fade-up" data-aos-delay="900">
+        <br>
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold" id="title2">Pourquoi faire ça ?</h3>
         <p class="mt-3">Parce que parfois, une fin ça peut aussi faire du bien. Parce qu'il faut laisser une trace de tout ce qu'on a perdu.</p>
+        <br>
         <a href="auth/login.php" class="btn-custom">Créer une page</a>
       </div>
     </div>
