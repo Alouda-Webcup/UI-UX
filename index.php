@@ -44,28 +44,28 @@
  
   <!-- Features -->
   <section class="features container">
-  <div class="row" data-aos="fade-up" data-aos-delay="900">  
+  <div class="row" data-aos="fade-up" data-aos-delay="300">  
     <h6 class="text-danger mb-2">Comment fonctionne TheEnd ?</h6>
     <h2 class="fw-bold mb-5" id="title2">Tu quittes quelque chose ou quelqu’un ?<br>Fais-le avec style.</h2>
   </div>
  
-    <div class="row text-center" data-aos="fade-up" data-aos-delay="900">
-      <div class="col-md-3">
+    <div class="row text-center">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
         <img src="assets/img/palette.png" class="img-fluid w-25">
         <p><b>Choisis ton style</b></p>
         <p>Rageur, doux-amer ou carrément cringe — tout est permis.</p>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
         <img src="assets/img/pen.png" class="img-fluid w-25">
         <p><b>Écris ton dernier mot</b></p>
         <p>Un message, une lettre, un cri du cœur ou un gif de chat qui pleure. Libre à toi.</p>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="800">
         <img src="assets/img/paper.png" class="img-fluid w-25">
         <p><b>Personnalise ta page</b></p>
         <p>Couleurs, sons, emojis, gifs, effets… fais-toi plaisir.</p>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="1000">
         <img src="assets/img/airplane.png" class="img-fluid w-25">
         <p><b>Partage le lien</b></p>
         <p>À ton boss, ton ex, ton groupe WhatsApp ou au monde entier. Ou garde-le pour toi.</p>
@@ -79,11 +79,11 @@
       <div class="col-md-6">
         <img src="assets/img/palmsupguy.png">
       </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="900">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
         <br>
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold" id="title2">Ne pars pas sans dire un dernier mot.</h3>
-        <p class="mt-3">TheEnd t’aide avec une plateforme pour créer ta page de départ pleine de style (ou de larmes).</p>
+        <p class="mt-3">TheEnd.page t’aide avec une plateforme pour créer ta page de départ pleine de style (ou de larmes).</p>
         <br>
         <a href="auth/login.php" class="btn-custom">Créer une page</a>
       </div>
@@ -93,10 +93,10 @@
   <!-- Section 2 -->
   <section class="section-highlight container fade-in delay-1">
     <div class="row flex-md-row-reverse">
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-in" data-aos-delay="200">
         <img src="assets/img/palmsupgirl.png">
       </div>
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="900">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
         <br>
         <p class="text-orange">C’est la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold" id="title2">Pourquoi faire ça ?</h3>

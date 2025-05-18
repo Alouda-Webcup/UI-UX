@@ -153,7 +153,7 @@
 </head>
 <body>
  
-  <nav class="navbar navbar-expand-lg navbar-light navbar-capsule" aria-label="Main navigation">
+  <nav class="navbar navbar-expand-lg navbar-light navbar-capsule fixed-top" aria-label="Main navigation">
     <div class="container-fluid">
       <a class="navbar-brand" href="#" aria-label="TheEnd, retour à l'accueil">TheEnd<span>.</span></a>
  
@@ -181,7 +181,7 @@
             <a class="nav-link fw-normal" href="../pages/project.php" role="menuitem" tabindex="0">Mes pages</a>
           </li>
         </ul>
-        <a href="#" class="btn btn-cta" role="button" tabindex="0">Déconnexion</a>
+        <a href="#" class="btn btn-cta" role="button" tabindex="0">Connexion</a>
       </div>
     </div>
   </nav>
