@@ -1,36 +1,4 @@
-<?php
-session_start();
 
-// Redirection si utilisateur non connecté
-if (!isset($_SESSION['user_id'])) {
-    header('Location: ../auth/login.php');
-    exit();
-}
-
-// Connexion à la BDD
-require_once '../config/bdconnect.php';
-
-// Requête pour récupérer toutes les pages avec leurs infos
-$sql = "
-    SELECT 
-        id_page,
-        pg_tone,
-        pg_message,
-        pg_object,
-        pg_file,
-        pg_gif,
-        pg_sounds,
-        pg_creationdate,
-        id_projects,
-        id_users
-    FROM page
-    ORDER BY pg_creationdate DESC
-";
-
-$stmt = $conn->prepare($sql);
-$stmt->execute();
-$pages = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
