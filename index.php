@@ -37,51 +37,56 @@
  <br>
 
   <!--Carousel-->
-  <section>
-    <div class="carousel-container justify-items-center align-content-center ">
-      <h1 class="display-5 fw-bold" id="title3"> Les meilleures pages selon nos utilisateurs !</h1>
-      <div class="carousel-wrapper" id="custom-carousel">
-  
-        <!-- Frontend -->
-        <div class="carousel-slide active">
-          <div class="skill-box text-center">
-            <h5 class="mb-4">Test</h5>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <div><strong>3</strong></div>
-              </div>
+  <section class="d-flex flex-column align-items-center justify-content-center text-center py-5" id="carousel-section" data-aos="fade-up" data-aos-delay="200px">
+    <div class="container text-center">
+        <h1 class="display-5 fw-bold" id="title3">Les meilleures pages selon nos utilisateurs !</h1>
+    </div>
+
+  <div class="carousel-container w-100" style="max-width: 300px;">
+    <br>
+    
+    <div class="carousel-wrapper" id="custom-carousel">
+      
+      <!-- Slide 1 -->
+      <div class="carousel-slide active">
+        <div class="skill-box text-center">
+          <h5 class="mb-4">Test</h5>
+          <div class="row justify-content-center">
+            <div class="col-6 mb-4">
+              <div><strong>3</strong></div>
             </div>
           </div>
         </div>
-
-       
-        <div class="carousel-slide">
-          <div class="skill-box text-center">
-            <h5 class="mb-4">Test</h5>
-            <div class="row">
-              <div class="col-6 mb-4">
-                <div><strong>2</strong></div>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-
-        
-    <div class="carousel-slide">
-  <div class="skill-box text-center">
-    <h5 class="mb-4">Test</h5>
-    <div class="row">
-      <div class="col-6 mb-4">
-        <div><strong>1</strong></div> 
       </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="skill-box text-center">
+          <h5 class="mb-4">Test</h5>
+          <div class="row justify-content-center">
+            <div class="col-6 mb-4">
+              <div><strong>2</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <div class="skill-box text-center">
+          <h5 class="mb-4">Test</h5>
+          <div class="row justify-content-center">
+            <div class="col-6 mb-4">
+              <div><strong>1</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-</div>
-</div>
-</div>
-</div>
 </section>
+
  
  
   <!-- Mini Tutoriel -->
@@ -124,7 +129,7 @@
 
         <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
             <br>
-        <p class="text-orange">C’est bien la fin ? Fête ça dignement.</p>
+        <p class="text-orange">C’est     la fin ? Fête ça dignement.</p>
         <h3 class="fw-bold" id="title2">Ne pars pas sans dire un dernier mot.</h3>
         <p class="mt-3">TheEnd.page t’aide pour créer ta page de départ pleine de style (ou de larmes).</p>
         <br>

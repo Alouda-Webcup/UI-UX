@@ -22,7 +22,6 @@
 
     #title3 {
         font-family: "IBM Plex Sans", sans-serif;
-        text-align: center;
     }
  
     .features {
@@ -102,8 +101,8 @@
     position: relative;
     width: 100%;
     height: 300px;
-    perspective: 1000px;
-    margin-bottom: 10rem;
+    perspective: 500px;
+    margin-bottom: 5rem;
     }
 
     .carousel-slide {
@@ -132,9 +131,6 @@
     transform: translateX(320px) scale(0.8);
     z-index: 2;
     }
-
-
-
 
 
     .carousel-slide .skill-box {
@@ -177,6 +173,7 @@
     .carousel-control-next {
     right: 0;
     }
+
     .delay-1 { animation-delay: 0.3s; }
     .delay-2 { animation-delay: 0.6s; }
     .delay-3 { animation-delay: 0.9s; }
