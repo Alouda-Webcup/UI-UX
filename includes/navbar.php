@@ -1,9 +1,12 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $current_page = basename($_SERVER['PHP_SELF']);
 $logged_in = isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true;
 $username = $logged_in ? $_SESSION['username'] : '';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
