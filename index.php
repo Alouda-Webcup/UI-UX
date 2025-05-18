@@ -1,4 +1,5 @@
-
+ <?php include('includes/navbar.php') ?>
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +23,7 @@
 <body>
 
  
-  <!-- Header -->
-  <?php include('includes/navbar.php') ?>
+  
  
   <!-- Hero -->
   <section class="hero fade-in delay-1">
