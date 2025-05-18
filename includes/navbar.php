@@ -101,6 +101,8 @@ $username = $logged_in ? $_SESSION['username'] : '';
       white-space: nowrap;
       margin-left: 1.5rem;
       transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .btn-cta:hover,
@@ -178,7 +180,7 @@ $username = $logged_in ? $_SESSION['username'] : '';
 
 <nav class="navbar navbar-expand-lg navbar-light navbar-capsule" aria-label="Main navigation">
   <div class="container-fluid">
-    <a class="navbar-brand" href="../index.php" aria-label="Retour à l'accueil">TheEnd<span>.</span></a>
+    <a class="navbar-brand" href="/index.php" aria-label="Retour à l'accueil">TheEnd<span>.</span></a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Basculer la navigation">
@@ -188,15 +190,14 @@ $username = $logged_in ? $_SESSION['username'] : '';
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0" role="menu" aria-label="Menu principal">
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="../index.php" role="menuitem" >Accueil</a>
+          <a class="nav-link <?= $current_page == 'index.php' ? 'active' : '' ?>" href="/index.php" role="menuitem" >Accueil</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'create.php' ? 'active' : '' ?>" href="../pages/create.php" role="menuitem">Créer une page</a>
+          <a class="nav-link <?= $current_page == 'create.php' ? 'active' : '' ?>" href="/pages/create.php" role="menuitem">Créer une page</a>
         </li>
         <li class="nav-item" role="none">
-          <a class="nav-link <?= $current_page == 'contact.php' ? 'active' : '' ?>" href="../pages/project.php" role="menuitem" >Mes pages</a>
+          <a class="nav-link <?= $current_page == 'project.php' ? 'active' : '' ?>" href="/pages/project.php" role="menuitem" >Mes pages</a>
         </li>
-    
       </ul>
 
       <?php if ($logged_in): ?>
@@ -206,9 +207,9 @@ $username = $logged_in ? $_SESSION['username'] : '';
           </svg>
           <?= htmlspecialchars($username) ?>
         </span>
-        <a href="../auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
+        <a href="/auth/logout.php" class="btn btn-cta" role="button" aria-label="Déconnexion">Déconnexion</a>
       <?php else: ?>
-        <a href="../auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
+        <a href="/auth/login.php" class="btn btn-cta" role="button" aria-label="Connexion">Connexion</a>
       <?php endif; ?>
     </div>
   </div>
