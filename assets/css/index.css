@@ -1,7 +1,9 @@
-body {
+    body {
       font-family: 'Segoe UI', sans-serif;
-      background-color: #fff;
+      background-color: #d4d4d4;
       color: #000;
+      padding-top: 150px;
+      overflow-x: hidden;
     }
  
     .hero {
@@ -9,6 +11,50 @@ body {
         padding: 4rem 1rem;
         font-family: "Poppins", sans-serif;
     }
+    @keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.shiny-text {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(120deg, #000000 0%, #EE5622 40%, #000000 100%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2.5s linear infinite;
+}
+.lign {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.lign::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background-color: orange;
+  border-radius: 2px;
+}
+.text-orange {
+    color: #EE5622;
+}
+
+
+
+
  
     #title1 {
         font-family: "IBM Plex Sans", sans-serif;
@@ -18,11 +64,9 @@ body {
     #title2 {
         font-family: "IBM Plex Sans", sans-serif;
     }
-    .gradient-section {
-        background: linear-gradient(120deg, #FFF085, #FF9B17, #F16767);
-        padding: 4rem 1rem;
-        border-radius: 2rem;
-        margin: 2rem auto;
+
+    #title3 {
+        font-family: "IBM Plex Sans", sans-serif;
     }
  
     .features {
@@ -40,7 +84,7 @@ body {
     }
  
     .section-highlight .text-orange {
-        color: #FF6600;
+        color: #EE5622;
         font-weight: bold;
         text-transform: uppercase;
         font-size: 0.9rem;
@@ -66,32 +110,121 @@ body {
       }
     }
  
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease-out forwards;
-}
- 
-@keyframes fadeInUp {
-  to {
+    .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+    .fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUpSmooth 2s ease-out forwards;
+    }
+    
+    @keyframes fadeUpSmooth {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+    .zoom-in {
+    animation: zoomIn 1s ease-out;
+    }
+
+    .carousel-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    perspective: 500px;
+   
+    }
+
+    .carousel-slide {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s;
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(0.8);
+    z-index: 1;
+    }
+
+    .carousel-slide.center {
+    transform: translateX(0) scale(1);
     opacity: 1;
-    transform: translateY(0);
-  }
+    z-index: 3;
+    }
+
+    .carousel-slide.left {
+    transform: translateX(-320px) scale(0.8);
+    z-index: 2;
+    }
+
+    .carousel-slide.right {
+    transform: translateX(320px) scale(0.8);
+    z-index: 2;
+    }
+
+
+   .carousel-slide .skill-box {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
- 
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUpSmooth 1.2s ease-out forwards;
+
+
+    .carousel-control-prev,
+    .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    }
+
+    .carousel-control-prev {
+    left: 0;
+    }
+
+    .carousel-control-next {
+    right: 0;
+    }
+
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+
+    .carousel-slide .skill-box img {
+  border: 1px solid #000;     /* Bordure noire */
+  border-radius: 10px;        /* Coins arrondis pour harmoniser avec .skill-box */
+  width: 100%;                /* S’adapte au conteneur */
+  height: auto;               /* Garde les proportions */
 }
- 
-@keyframes fadeUpSmooth {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
- 
-.delay-1 { animation-delay: 0.3s; }
-.delay-2 { animation-delay: 0.6s; }
-.delay-3 { animation-delay: 0.9s; }
